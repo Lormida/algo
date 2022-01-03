@@ -309,6 +309,7 @@ console.log(harmlessRansomNote('from this is a secret note for you from a secret
 
 // Palindrome
 
+/*
 function isPalindrome(line) {
   const aCodeSymbol = 'a'.charCodeAt(0)
   const zCodeSymbol = 'z'.charCodeAt(0)
@@ -318,5 +319,17 @@ function isPalindrome(line) {
 
   return line.join('') == line.reverse().join('')
 }
+ */
+// console.log(isPalindrome("Madam, I'm, !AdAm"))
 
-console.log(isPalindrome("Madam, I'm, !AdAm"))
+// Reverse words
+
+/* function reverseWords(phrase) {
+  let modifiedPhrase = ''
+  for (let i = 0; i < phrase.length; i++) {
+    modifiedPhrase += phrase[phrase.length - i - 1]
+  }
+  return modifiedPhrase
+}
+console.log(reverseWords('Coding JavaScript'))
+ */
