@@ -333,3 +333,43 @@ function isPalindrome(line) {
 }
 console.log(reverseWords('Coding JavaScript'))
  */
+
+// Reverse Array In Place
+
+/* function reverseArrayInPlace(arr) {
+  let newArray = []
+  let l = arr.length
+  for (let i = 0; i < l / 2; i++) {
+    newArray[i] = arr[l - i - 1]
+    newArray[l - i - 1] = arr[i]
+  }
+  console.log(newArray)
+
+}
+
+reverseArrayInPlace([1, 2, 3, 4, 5]) */
+
+
+// Collect sum
+
+/* function collectSum(array, sum) {
+  let results = []
+  let originDict = {}
+  array.forEach(digit => {
+    if (!originDict[digit]) originDict[digit] = 1
+    else originDict[digit]++
+  })
+
+  array.forEach(digit => {
+    if (originDict[digit] && array.includes(sum - digit)) {
+      results.push([digit, sum - digit])
+      originDict[digit]--
+      originDict[sum - digit]--
+    }
+  })
+  return results
+}
+
+console.log(collectSum([1, 5, 2, 3, 4, 7, 6, 5], 9)) */
+
+// Fibonacci
