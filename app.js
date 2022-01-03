@@ -373,3 +373,13 @@ reverseArrayInPlace([1, 2, 3, 4, 5]) */
 console.log(collectSum([1, 5, 2, 3, 4, 7, 6, 5], 9)) */
 
 // Fibonacci
+/*
+function fibonacci(n) {
+  if (n == 0) return 0
+  if (n == 1) return 1
+  return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+console.log(fibonacci(9)) */
+
+// Caesar Cipher
