@@ -384,7 +384,7 @@ console.log(fibonacci(9)) */
 
 // Caesar Cipher
 
-function caesarCipher(str, num) {
+/* function caesarCipher(str, num) {
   let strArray = str.split(' ')
   return strArray.map(word => word.split('').map(symbol => {
     if (symbol == symbol.toUpperCase()) return String.fromCharCode((symbol.charCodeAt(0) - 'a'.charCodeAt(0) + num) % 26 + 'a'.charCodeAt(0))
@@ -394,3 +394,17 @@ function caesarCipher(str, num) {
 }
 
 console.log(caesarCipher('zoo Keeper', 2))
+ */
+
+// Fibonacci Memorized
+
+/* const store = {}
+function fibonacciMemorized(num, store) {
+  if (num < 2) return 1
+  if (store[num]) return store[num]
+  let result = fibonacciMemorized(num - 1, store) + fibonacciMemorized(num - 2, store)
+  store[num] = result
+  return result
+}
+
+console.log(fibonacciMemorized(5, store)) */
