@@ -491,7 +491,7 @@ console.log(determineProfit([125, 50, 6, 10, 33, 25, 1]))
 
 // Sieve of Eratosthenes
 
-function primeSieve(n) {
+/* function primeSieve(n) {
   let array = []
   for (let i = 1; i < n; i++) array[i] = i + 1
 
@@ -504,4 +504,21 @@ function primeSieve(n) {
   return array.filter(num => num != false)
 
 }
-console.log(primeSieve(120))
+console.log(primeSieve(120)) */
+
+// Bubble sort
+
+function bubbleSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 0; j < array.length - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        array[j] += array[j + 1]
+        array[j + 1] = array[j] - array[j + 1]
+        array[j] = array[j] - array[j + 1]
+      }
+    }
+  }
+  return array
+}
+
+console.log(bubbleSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
