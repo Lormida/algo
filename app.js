@@ -472,7 +472,7 @@ console.log(fibonacciMemorized(5, store)) */
 
 // Max profit
 
-function determineProfit(array) {
+/* function determineProfit(array) {
   let minPrice = array[0]
   let tomorrowPrice = array[1]
   let maxProfit = -1
@@ -487,3 +487,21 @@ function determineProfit(array) {
 
 }
 console.log(determineProfit([125, 50, 6, 10, 33, 25, 1]))
+ */
+
+// Sieve of Eratosthenes
+
+function primeSieve(n) {
+  let array = []
+  for (let i = 1; i < n; i++) array[i] = i + 1
+
+  for (let i = 2; i < Math.sqrt(n); i++) {
+    array = array.map((num, index) => {
+      if (index + 1 >= i ** 2 && num % i == 0) return false
+      return num
+    })
+  }
+  return array.filter(num => num != false)
+
+}
+console.log(primeSieve(120))
