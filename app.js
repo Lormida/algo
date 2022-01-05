@@ -266,7 +266,8 @@ table.insert('Daen', 'EDITED DAEN')
 // console.log(table)
 // console.log(table.retrieveAll())
  */
-// Algorithmes
+
+// ====================Algorithmes=======================
 
 // Fizz-Buzz
 
@@ -287,6 +288,7 @@ FizzBuzz(20)
  */
 
 // Harmless Ransom Note
+
 /* function harmlessRansomNote(noteText, magazineText) {
   let noteTextArray = noteText.split(' ')
   let magazineTextArray = magazineText.split(' ')
@@ -309,8 +311,7 @@ console.log(harmlessRansomNote('from this is a secret note for you from a secret
 
 // Palindrome
 
-/*
-function isPalindrome(line) {
+/* function isPalindrome(line) {
   const aCodeSymbol = 'a'.charCodeAt(0)
   const zCodeSymbol = 'z'.charCodeAt(0)
   line = line
@@ -319,8 +320,8 @@ function isPalindrome(line) {
 
   return line.join('') == line.reverse().join('')
 }
- */
 // console.log(isPalindrome("Madam, I'm, !AdAm"))
+ */
 
 // Reverse words
 
@@ -349,7 +350,6 @@ console.log(reverseWords('Coding JavaScript'))
 
 reverseArrayInPlace([1, 2, 3, 4, 5]) */
 
-
 // Collect sum
 
 /* function collectSum(array, sum) {
@@ -373,8 +373,7 @@ reverseArrayInPlace([1, 2, 3, 4, 5]) */
 console.log(collectSum([1, 5, 2, 3, 4, 7, 6, 5], 9)) */
 
 // Fibonacci
-/*
-function fibonacci(n) {
+/* function fibonacci(n) {
   if (n == 0) return 0
   if (n == 1) return 1
   return fibonacci(n - 1) + fibonacci(n - 2)
@@ -449,8 +448,8 @@ console.log(fibonacciMemorized(5, store)) */
     'mode': getMode(array),
   }
 }
- */
 // console.log(MeanMedianMode([10, 23, 10, 15, 23, 9]))
+ */
 
 // Binary Search
 
@@ -468,7 +467,6 @@ console.log(fibonacciMemorized(5, store)) */
   }
 }
 // console.log(binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56)) */
-
 
 // Max profit
 
@@ -525,6 +523,7 @@ console.log(bubbleSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
  */
 
 // Merge Sort
+
 /* function joinArray(array1, array2, finalArray = []) {
   finalArray = finalArray || []
   if (array1[0] <= array2[0]) finalArray.push(array1.shift())
@@ -547,5 +546,3 @@ function mergeSort(array) {
   return joinArray(mergeSort(firstHalve), mergeSort(secondHalve))
 }
 console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
-
-//
