@@ -508,7 +508,7 @@ console.log(primeSieve(120)) */
 
 // Bubble sort
 
-function bubbleSort(array) {
+/* function bubbleSort(array) {
   for (let i = 0; i < array.length - 1; i++) {
     for (let j = 0; j < array.length - i - 1; j++) {
       if (array[j] > array[j + 1]) {
@@ -522,3 +522,30 @@ function bubbleSort(array) {
 }
 
 console.log(bubbleSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
+ */
+
+// Merge Sort
+/* function joinArray(array1, array2, finalArray = []) {
+  finalArray = finalArray || []
+  if (array1[0] <= array2[0]) finalArray.push(array1.shift())
+  else finalArray.push(array2.shift())
+
+  if ((array1.length && !array2.length) || (!array1.length && array2.length)) {
+    finalArray.push(...array1, ...array2)
+    return finalArray
+  }
+  if (array1.length == array2.length && array1.length == 0) return finalArray
+  return joinArray(array1, array2, finalArray)
+}
+
+function mergeSort(array) {
+  if (array.length == 1) return array
+
+  let firstHalve = array.slice(0, array.length / 2)
+  let secondHalve = array.slice(array.length / 2, array.length)
+
+  return joinArray(mergeSort(firstHalve), mergeSort(secondHalve))
+}
+console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+
+//
