@@ -546,3 +546,67 @@ function mergeSort(array) {
   return joinArray(mergeSort(firstHalve), mergeSort(secondHalve))
 }
 console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+
+
+// Insert sort
+
+/* function insertSort(array) {
+  for (let i = 0; i < array.length; i++) {
+    let min = array[i]
+    let minIndex = i
+    for (let j = i; j < array.length; j++) {
+      if (array[j] < min) {
+        min = array[j]
+        minIndex = j
+      }
+    }
+    let temp = array[i]
+    array[i] = min
+    array[minIndex] = temp
+  }
+  return array
+}
+console.log(insertSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+
+// BreadthSearch
+
+/* const graph = {}
+graph.a = ['b']
+graph.b = ['c']
+graph.c = ['d']
+graph.d = ['e']
+graph.e = ['d']
+graph.f = ['a']
+
+function breadthSearch(graph, start, end) {
+  let queue = [start]
+  while (queue.length > 0) {
+    let departurePoint = queue.shift()
+    if (graph[departurePoint].includes(end)) return true
+    graph[departurePoint].forEach(point => queue.push(point))
+  }
+  return false
+}
+console.log(breadthSearch(graph, 'a', 'e')) */
+
+// Quick sort
+
+/* function quickSort(array) {
+  if (array.length < 2) return array
+
+  let lessArray = []
+  let largerArray = []
+  let mediumElement = array[Math.floor(array.length / 2)]
+
+  array.forEach(el => {
+    if (el != mediumElement) {
+      if (el >= mediumElement) largerArray.push(el)
+      else lessArray.push(el)
+    }
+  })
+  return [...quickSort(lessArray), mediumElement, ...quickSort(largerArray)]
+}
+
+console.log(quickSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+
+//
