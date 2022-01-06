@@ -1,16 +1,14 @@
 // Linked list
 
-/* function LinkedList() {
+function LinkedList() {
   this.head = null
   this.tail = null
 }
-
 function Node(value, next, prev) {
   this.value = value
   this.next = next
   this.prev = prev
 }
-
 
 LinkedList.prototype.addToHeadList = function (value) {
   let newNode = new Node(value, this.head, null)
@@ -60,7 +58,6 @@ LinkedList.prototype.removeLastNode = function () {
   return val
 }
 
-
 LinkedList.prototype.listHasValue = function (value) {
   let currentNode = this.head
   while (currentNode) {
@@ -81,16 +78,13 @@ LinkedList.prototype.indexOf = function (value) {
   }
   return indexes
 }
-
-let ll = new LinkedList()
+/* let ll = new LinkedList()
 ll.addToHeadList(300)
 ll.addToHeadList(200)
 ll.addToHeadList(100)
 ll.addToTailList(400)
 ll.addToTailList(100)
 ll.addToTailList(500)
-
-
 console.log(ll.listHasValue(200)) // true
 console.log(ll.listHasValue(600)) // false
 console.log(ll) // [100,200,300,400,100,500]
@@ -98,7 +92,7 @@ console.log(ll.indexOf(100)) // [0,4] */
 
 // Binary search
 
-/* function BST(value) {
+function BST(value) {
   this.value = value
   this.left = null
   this.right = null
@@ -172,8 +166,7 @@ BST.prototype.getMaxVal = function () {
   if (!this.right) return this.value
   return this.right.getMaxVal()
 }
-
-let root = new BST(50)
+/* let root = new BST(50)
 root.insert(30)
 root.insert(70)
 root.insert(45)
@@ -194,7 +187,7 @@ console.log(root.getMaxVal()) */
 
 // Hash table
 
-/* function HashTable(size) {
+function HashTable(size) {
   this.bucket = new Array(size)
   this.bucketSize = size
 }
@@ -254,8 +247,7 @@ HashTable.prototype.retrieveAll = function () {
   }
   return pairs
 }
-
-let table = new HashTable(30)
+/* let table = new HashTable(30)
 table.insert('Dane', 'dane@gmail.com')
 table.insert('Andrew', 'andrew@gmail.com')
 table.insert('Daen', 'daen@gmail.com')
@@ -263,15 +255,15 @@ table.insert('Dnae', 'Dnae@gmail.com')
 
 table.insert('Andrew', 'future@gmail.com')
 table.insert('Daen', 'EDITED DAEN')
-// console.log(table)
-// console.log(table.retrieveAll())
- */
+
+console.log(table)
+console.log(table.retrieveAll()) */
 
 // ====================Algorithmes=======================
 
 // Fizz-Buzz
 
-/* function FizzBuzz(num) {
+function FizzBuzz(num) {
   for (let i = 1; i <= num; i++) {
     if (!(i % 5) && !(i % 3)) {
       console.log('FizzBuzz')
@@ -284,12 +276,11 @@ table.insert('Daen', 'EDITED DAEN')
     }
   }
 }
-FizzBuzz(20)
- */
+/* FizzBuzz(20) */
 
 // Harmless Ransom Note
 
-/* function harmlessRansomNote(noteText, magazineText) {
+function harmlessRansomNote(noteText, magazineText) {
   let noteTextArray = noteText.split(' ')
   let magazineTextArray = magazineText.split(' ')
   let sourceDict = {}
@@ -305,13 +296,12 @@ FizzBuzz(20)
   console.log(sourceDict)
   return true
 }
-
-console.log(harmlessRansomNote('from this is a secret note for you from a secret admirer',
+/* console.log(harmlessRansomNote('from this is a secret note for you from a secret admirer',
   'puerto rico is a place of great wonder and excitement it has many secret waterfall locations that i am an admirer of you must hike quite a distance to find the secret places as they are far from populated areas but it is worth the effort a tip i have for you is to go early in the morning when it is not so hot out also note that you must wear hiking boots this is one of the best places i have ever visited')) */
 
 // Palindrome
 
-/* function isPalindrome(line) {
+function isPalindrome(line) {
   const aCodeSymbol = 'a'.charCodeAt(0)
   const zCodeSymbol = 'z'.charCodeAt(0)
   line = line
@@ -320,24 +310,22 @@ console.log(harmlessRansomNote('from this is a secret note for you from a secret
 
   return line.join('') == line.reverse().join('')
 }
-// console.log(isPalindrome("Madam, I'm, !AdAm"))
- */
+/* console.log(isPalindrome("Madam, I'm, !AdAm")) */
 
 // Reverse words
 
-/* function reverseWords(phrase) {
+function reverseWords(phrase) {
   let modifiedPhrase = ''
   for (let i = 0; i < phrase.length; i++) {
     modifiedPhrase += phrase[phrase.length - i - 1]
   }
   return modifiedPhrase
 }
-console.log(reverseWords('Coding JavaScript'))
- */
+/* console.log(reverseWords('Coding JavaScript')) */
 
 // Reverse Array In Place
 
-/* function reverseArrayInPlace(arr) {
+function reverseArrayInPlace(arr) {
   let newArray = []
   let l = arr.length
   for (let i = 0; i < l / 2; i++) {
@@ -347,12 +335,11 @@ console.log(reverseWords('Coding JavaScript'))
   console.log(newArray)
 
 }
-
-reverseArrayInPlace([1, 2, 3, 4, 5]) */
+/* reverseArrayInPlace([1, 2, 3, 4, 5]) */
 
 // Collect sum
 
-/* function collectSum(array, sum) {
+function collectSum(array, sum) {
   let results = []
   let originDict = {}
   array.forEach(digit => {
@@ -369,21 +356,20 @@ reverseArrayInPlace([1, 2, 3, 4, 5]) */
   })
   return results
 }
-
-console.log(collectSum([1, 5, 2, 3, 4, 7, 6, 5], 9)) */
+/* console.log(collectSum([1, 5, 2, 3, 4, 7, 6, 5], 9)) */
 
 // Fibonacci
-/* function fibonacci(n) {
+
+function fibonacci(n) {
   if (n == 0) return 0
   if (n == 1) return 1
   return fibonacci(n - 1) + fibonacci(n - 2)
 }
-
-console.log(fibonacci(9)) */
+/* console.log(fibonacci(9)) */
 
 // Caesar Cipher
 
-/* function caesarCipher(str, num) {
+function caesarCipher(str, num) {
   let strArray = str.split(' ')
   return strArray.map(word => word.split('').map(symbol => {
     if (symbol == symbol.toUpperCase()) return String.fromCharCode((symbol.charCodeAt(0) - 'a'.charCodeAt(0) + num) % 26 + 'a'.charCodeAt(0))
@@ -391,13 +377,11 @@ console.log(fibonacci(9)) */
     return String.fromCharCode((symbol.charCodeAt(0) - 97 + num) % 26 + 97)
   }).join('')).join(' ')
 }
-
-console.log(caesarCipher('zoo Keeper', 2))
- */
+/* console.log(caesarCipher('zoo Keeper', 2)) */
 
 // Fibonacci Memorized
 
-/* const store = {}
+const store = {}
 function fibonacciMemorized(num, store) {
   if (num < 2) return 1
   if (store[num]) return store[num]
@@ -405,12 +389,11 @@ function fibonacciMemorized(num, store) {
   store[num] = result
   return result
 }
-
-console.log(fibonacciMemorized(5, store)) */
+/* console.log(fibonacciMemorized(5, store)) */
 
 // Mean Median Mode
 
-/* function MeanMedianMode(array) {
+function MeanMedianMode(array) {
   const getMean = array => (array.reduce((prev, cur) => prev + cur, 0) / array.length).toFixed(2)
 
   function getMedian(array) {
@@ -448,12 +431,11 @@ console.log(fibonacciMemorized(5, store)) */
     'mode': getMode(array),
   }
 }
-// console.log(MeanMedianMode([10, 23, 10, 15, 23, 9]))
- */
+/* console.log(MeanMedianMode([10, 23, 10, 15, 23, 9])) */
 
 // Binary Search
 
-/* function binarySearch(array, value) {
+function binarySearch(array, value) {
   let mediumIdx = Math.floor(array.length / 2)
   let middleValue = array[mediumIdx]
 
@@ -466,11 +448,11 @@ console.log(fibonacciMemorized(5, store)) */
     return binarySearch(array.slice(mediumIdx, array.length), value)
   }
 }
-// console.log(binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56)) */
+/* console.log(binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56)) */
 
 // Max profit
 
-/* function determineProfit(array) {
+function determineProfit(array) {
   let minPrice = array[0]
   let tomorrowPrice = array[1]
   let maxProfit = -1
@@ -484,12 +466,11 @@ console.log(fibonacciMemorized(5, store)) */
   return maxProfit
 
 }
-console.log(determineProfit([125, 50, 6, 10, 33, 25, 1]))
- */
+/* console.log(determineProfit([125, 50, 6, 10, 33, 25, 1])) */
 
 // Sieve of Eratosthenes
 
-/* function primeSieve(n) {
+function primeSieve(n) {
   let array = []
   for (let i = 1; i < n; i++) array[i] = i + 1
 
@@ -502,11 +483,11 @@ console.log(determineProfit([125, 50, 6, 10, 33, 25, 1]))
   return array.filter(num => num != false)
 
 }
-console.log(primeSieve(120)) */
+/* console.log(primeSieve(120)) */
 
 // Bubble sort
 
-/* function bubbleSort(array) {
+function bubbleSort(array) {
   for (let i = 0; i < array.length - 1; i++) {
     for (let j = 0; j < array.length - i - 1; j++) {
       if (array[j] > array[j + 1]) {
@@ -518,13 +499,11 @@ console.log(primeSieve(120)) */
   }
   return array
 }
-
-console.log(bubbleSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
- */
+/* console.log(bubbleSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])) */
 
 // Merge Sort
 
-/* function joinArray(array1, array2, finalArray = []) {
+function joinArray(array1, array2, finalArray = []) {
   finalArray = finalArray || []
   if (array1[0] <= array2[0]) finalArray.push(array1.shift())
   else finalArray.push(array2.shift())
@@ -545,12 +524,11 @@ function mergeSort(array) {
 
   return joinArray(mergeSort(firstHalve), mergeSort(secondHalve))
 }
-console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
-
+/* console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
 
 // Insert sort
 
-/* function insertSort(array) {
+function insertSort(array) {
   for (let i = 0; i < array.length; i++) {
     let min = array[i]
     let minIndex = i
@@ -566,17 +544,9 @@ console.log(mergeSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
   }
   return array
 }
-console.log(insertSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+/* console.log(insertSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
 
 // BreadthSearch
-
-/* const graph = {}
-graph.a = ['b']
-graph.b = ['c']
-graph.c = ['d']
-graph.d = ['e']
-graph.e = ['d']
-graph.f = ['a']
 
 function breadthSearch(graph, start, end) {
   let queue = [start]
@@ -587,11 +557,18 @@ function breadthSearch(graph, start, end) {
   }
   return false
 }
+/* const graph = {}
+graph.a = ['b']
+graph.b = ['c']
+graph.c = ['d']
+graph.d = ['e']
+graph.e = ['d']
+graph.f = ['a']
 console.log(breadthSearch(graph, 'a', 'e')) */
 
 // Quick sort
 
-/* function quickSort(array) {
+function quickSort(array) {
   if (array.length < 2) return array
 
   let lessArray = []
@@ -606,25 +583,9 @@ console.log(breadthSearch(graph, 'a', 'e')) */
   })
   return [...quickSort(lessArray), mediumElement, ...quickSort(largerArray)]
 }
-
-console.log(quickSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
+/* console.log(quickSort([7, 3, -100, 10, 1, -14, 18, 1, 2, 0, 9, 11, -4])) */
 
 // Find the shortest way (Dijctra)
-
-/* const graph = {}
-graph.a = { b: 2, c: 1 }
-graph.b = { f: 7 }
-graph.c = { d: 5, e: 2 }
-graph.d = { f: 2 }
-graph.e = { f: 150 }
-graph.f = { g: 1 }
-graph.g = {}
-
-// graph.a = { b: 10, e: 30, d: 100 }
-// graph.b = { c: 50 }
-// graph.c = { d: 10 }
-// graph.e = { c: 20, d: 60 }
-// graph.d = {}
 
 function findShortestWay(graph, start, end, neighbors = {}, passed = []) {
   // Write info about close neighbors
@@ -646,8 +607,20 @@ function findShortestWay(graph, start, end, neighbors = {}, passed = []) {
   })
   return neighbors
 }
+/* const graph = {}
+graph.a = { b: 2, c: 1 }
+graph.b = { f: 7 }
+graph.c = { d: 5, e: 2 }
+graph.d = { f: 2 }
+graph.e = { f: 150 }
+graph.f = { g: 1 }
+graph.g = {}
 
-
+// graph.a = { b: 10, e: 30, d: 100 }
+// graph.b = { c: 50 }
+// graph.c = { d: 10 }
+// graph.e = { c: 20, d: 60 }
+// graph.d = {}
 console.log(findShortestWay(graph, 'a', 'd')) */
 
 //
